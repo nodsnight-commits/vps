@@ -29,7 +29,7 @@ print_status() {
     local type=$1
     local message=$2
     
-     case $type in
+   case $type in
         "INFO") echo -e "\033[1;34m[🔵 INFO]\033[0m $message" ;;
         "WARN") echo -e "\033[1;33m[🟠 WARN]\033[0m $message" ;;
         "ERROR") echo -e "\033[1;31m[🔴 ERROR]\033[0m $message" ;;
@@ -147,7 +147,9 @@ PORT_FORWARDS="$PORT_FORWARDS" 🔗
 IMG_FILE="$IMG_FILE" 📁
 SEED_FILE="$SEED_FILE" 💿
 CREATED="$CREATED" 📅
-EOF   
+EOF
+
+    
     print_status "SUCCESS" "Configuration saved to $config_file"
 }
 
