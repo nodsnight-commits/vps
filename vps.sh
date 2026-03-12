@@ -9,13 +9,19 @@ set -euo pipefail
 display_header() {
     clear
     cat << "EOF"
-========================================================================
-Sponsor By These Guys!                                                                  
-HOPINGBOYZ
-Jishnu
-NotGamerPie
+  _   _ _____ _____ _   _ _____   _   _  ____  _____  ______  _____ 
+
+
+   | \ | |_   _/ ____| | | |_   _| | \ | |/ __ \|  __ \|  ____|/ ____|
+   |  \| | | || |  __| |_| | | |   |  \| | |  | | |  | | |__  | (___  
+   | . ` | | || | |_ |  _  | | |   | . ` | |  | | |  | |  __|  \___ \ 
+   | |\  |_| || |__| | | | |_| |_  | |\  | |__| | |__| | |____ ____) |
+   |_| \_|_____\_____|_| |_|_____| |_| \_|\____/|_____/|______|_____/ 
+                                                                  
+                      🌌 POWERED BY NIGHT NODES 🌌
 ========================================================================
 EOF
+    echo -e "          🛠️  VIRTUALIZATION MADE SIMPLE & STYLISH 🛠️"
     echo
 }
 
@@ -25,15 +31,14 @@ print_status() {
     local message=$2
     
     case $type in
-        "INFO") echo -e "\033[1;34m[INFO]\033[0m $message" ;;
-        "WARN") echo -e "\033[1;33m[WARN]\033[0m $message" ;;
-        "ERROR") echo -e "\033[1;31m[ERROR]\033[0m $message" ;;
-        "SUCCESS") echo -e "\033[1;32m[SUCCESS]\033[0m $message" ;;
-        "INPUT") echo -e "\033[1;36m[INPUT]\033[0m $message" ;;
+        "INFO") echo -e "\033[1;34m[🔵 INFO]\033[0m $message" ;;
+        "WARN") echo -e "\033[1;33m[🟠 WARN]\033[0m $message" ;;
+        "ERROR") echo -e "\033[1;31m[🔴 ERROR]\033[0m $message" ;;
+        "SUCCESS") echo -e "\033[1;32m[🟢 SUCCESS]\033[0m $message" ;;
+        "INPUT") echo -e "\033[1;36m[⌨️  INPUT]\033[0m $message" ;;
         *) echo "[$type] $message" ;;
     esac
 }
-
 # Function to validate input
 validate_input() {
     local type=$1
